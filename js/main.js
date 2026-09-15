@@ -1,5 +1,5 @@
 /**
- * LOCI-Memory Research Showcase - Main Script (Light Theme)
+ * LOCI Research Showcase - Main Script (Light Theme)
  * Handles real-time interactive canvas visualizer, floating navigation ScrollSpy,
  * gallery filter tabs, and BibTeX copy utility.
  */
@@ -19,7 +19,7 @@ function initFloatingNav() {
   const floatingNav = document.getElementById('floatingNav');
   const navTrigger = document.getElementById('navTrigger');
   const navLinks = document.querySelectorAll('.floating-nav-link');
-  const sections = document.querySelectorAll('header[id], section[id]');
+  const sections = document.querySelectorAll('header[id], section[id], #visualizer');
 
   // Toggle nav drawer on click for mobile/touch
   if (navTrigger) {

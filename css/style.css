@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LOCI-Memory Research Showcase - Design System & Stylesheet (Light Theme)
+   LOCI Research Showcase - Design System & Stylesheet (Light Theme)
    Inspired by BFM-Zero academic project site standards
    ========================================================================== */
 
@@ -840,8 +840,324 @@ a:hover {
   border-top: 1px solid #e2e8f0;
 }
 
+/* ==========================================================================
+   Coming Soon & Release Roadmap Section
+   ========================================================================== */
+.btn-with-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-subtag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--accent-cyan);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+.btn-primary .btn-subtag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.coming-soon-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-full);
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  color: var(--accent-purple);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-purple);
+}
+
+.status-dot.pulsing {
+  animation: pulseGlow 1.8s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(124, 58, 237, 0);
+  }
+}
+
+.roadmap-wrapper {
+  margin-bottom: 4rem;
+}
+
+.roadmap-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.roadmap-step {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+}
+
+.roadmap-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.1);
+  border-color: rgba(2, 132, 199, 0.3);
+}
+
+.roadmap-step.completed {
+  border-top: 4px solid var(--accent-emerald);
+}
+
+.roadmap-step.in-progress {
+  border-top: 4px solid var(--accent-purple);
+}
+
+.roadmap-step.upcoming {
+  border-top: 4px solid var(--border-glass);
+}
+
+.step-indicator {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.roadmap-step.completed .step-indicator {
+  background: rgba(5, 150, 105, 0.12);
+  color: var(--accent-emerald);
+}
+
+.roadmap-step.in-progress .step-indicator {
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--accent-purple);
+}
+
+.roadmap-step.upcoming .step-indicator {
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+.step-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-step.completed .step-badge {
+  color: var(--accent-emerald);
+}
+
+.roadmap-step.in-progress .step-badge {
+  color: var(--accent-purple);
+}
+
+.roadmap-step.upcoming .step-badge {
+  color: var(--text-muted);
+}
+
+.step-phase-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.5rem;
+}
+
+.step-phase-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.deliverables-heading {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.deliverables-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.deliverable-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 calc((100% - 3rem) / 3);
+  max-width: calc((100% - 3rem) / 3);
+}
+
+.deliverable-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(2, 132, 199, 0.35);
+  box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.12);
+}
+
+.deliverable-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.deliverable-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.icon-cyan { background: rgba(2, 132, 199, 0.1); color: var(--accent-cyan); }
+.icon-purple { background: rgba(124, 58, 237, 0.1); color: var(--accent-purple); }
+.icon-rose { background: rgba(225, 29, 72, 0.1); color: var(--accent-rose); }
+.icon-emerald { background: rgba(5, 150, 105, 0.1); color: var(--accent-emerald); }
+.icon-amber { background: rgba(217, 119, 6, 0.1); color: var(--accent-amber); }
+
+.deliverable-tag.tag-soon {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(2, 132, 199, 0.08);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+.deliverable-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.75rem;
+}
+
+.deliverable-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.deliverable-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-glass);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.meta-status {
+  font-weight: 600;
+  color: var(--accent-purple);
+}
+
+.community-callout-card {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%), var(--bg-secondary);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.community-callout-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.community-callout-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.community-callout-text p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 650px;
+}
+
+.community-callout-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 992px) {
+  .roadmap-track {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .deliverable-card {
+    flex: 0 0 calc((100% - 1.5rem) / 2);
+    max-width: calc((100% - 1.5rem) / 2);
+  }
   .hero-title {
     font-size: 2.75rem;
   }
@@ -854,6 +1170,25 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .roadmap-track {
+    grid-template-columns: 1fr;
+  }
+  .deliverable-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .community-callout-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .community-callout-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .community-callout-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .floating-nav {
     right: 12px;
   }
