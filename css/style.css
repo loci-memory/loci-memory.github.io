@@ -358,6 +358,58 @@ a:hover {
   background: rgba(2, 132, 199, 0.12);
 }
 
+/* Hero Teaser Image Card */
+.hero-image-card {
+  margin-top: 3rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hero-image-card:hover {
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.12);
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  background: #ffffff;
+  padding: 1.5rem 1.5rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-teaser-img {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+}
+
+.hero-image-caption {
+  padding: 1rem 1.75rem 1.25rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  text-align: left;
+}
+
+.hero-image-caption p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.hero-image-caption strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 /* Hero Canvas & Visualizer Container */
 .hero-visual-card {
   margin-top: 3.5rem;
@@ -1042,6 +1094,31 @@ a:hover {
   transform: translateY(-5px);
   border-color: rgba(2, 132, 199, 0.35);
   box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.12);
+}
+
+/* Deliverable card with embedded image preview */
+.deliverable-card--has-img {
+  padding-bottom: 1.25rem;
+}
+
+.deliverable-img-preview {
+  margin: 0 -1.75rem 1.25rem;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.deliverable-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.deliverable-card--has-img:hover .deliverable-preview-img {
+  transform: scale(1.02);
 }
 
 .deliverable-top {

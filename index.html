@@ -20,8 +20,10 @@
     <div class="floating-nav-content">
       <ul class="floating-nav-menu">
         <li><a href="#hero" class="floating-nav-link active"><i class="fa-solid fa-house"></i> Overview</a></li>
-        <li><a href="#visualizer" class="floating-nav-link"><i class="fa-solid fa-brain"></i> Simulation</a></li>
+        <!-- <li><a href="#visualizer" class="floating-nav-link"><i class="fa-solid fa-brain"></i> Simulation</a></li> -->
         <li><a href="#abstract" class="floating-nav-link"><i class="fa-solid fa-file-alt"></i> Abstract</a></li>
+        <li><a href="#method" class="floating-nav-link"><i class="fa-solid fa-diagram-project"></i> Method</a></li>
+        <li><a href="#real-world-demo" class="floating-nav-link"><i class="fa-solid fa-robot"></i> Real-World Demo</a></li>
         <li><a href="#coming-soon" class="floating-nav-link"><i class="fa-solid fa-rocket"></i> Coming Soon</a></li>
       </ul>
     </div>
@@ -84,8 +86,27 @@
         </a>
       </div>
 
+      <!-- Teaser Image Card -->
+      <div class="hero-image-card" id="teaser">
+        <div class="hero-image-wrapper">
+          <picture>
+            <source srcset="assets/images/intro.webp" type="image/webp">
+            <img 
+              src="assets/images/intro.png" 
+              alt="LOCI Dual Memory Architecture and Spatiotemporal Retrieval Teaser" 
+              class="hero-teaser-img"
+              loading="eager"
+            >
+          </picture>
+        </div>
+        <div class="hero-image-caption">
+          <p>
+            <strong>Figure 1:</strong> LOCI organizes robot experience into persistent object-centric 3-D memory and episodic observation intervals. Observation links connect mapped entities to the context and visual evidence of individual encounters. A multimodal agent retrieves from both memories and inspects supporting evidence when semantic summaries are insufficient. </p>
+        </div>
+      </div>
+
       <!-- Hero Interactive Canvas Card -->
-      <div class="hero-visual-card" id="visualizer">
+      <!-- <div class="hero-visual-card" id="visualizer">
         <div class="visualizer-header">
           <div class="visualizer-title">
             <span class="dot"></span> Live Simulation: Real-Time Spatial Loci Memory Retrieval & Path Planning
@@ -120,7 +141,7 @@
             <i class="fa-solid fa-rotate-right"></i> Reset Simulation
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </header>
 
@@ -188,6 +209,70 @@ long-horizon memory retrieval and evidence-grounded reason-ing in a real-world o
     </div>
   </section>
 
+  
+
+  <!-- Method Overview Section -->
+  <section class="section" id="method">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fa-solid fa-diagram-project" style="color: var(--accent-purple);"></i> Method Overview
+      </h2>
+      <p class="section-subtitle">
+        LOCI builds a dual-memory graph from continuous RGB-D observations: an object-centric 3D memory for persistent entities and an episodic memory of temporally localized scenes. An agentic retrieval pipeline reasons jointly over both stores to answer complex spatiotemporal queries.
+      </p>
+
+      <div class="hero-image-card">
+        <div class="hero-image-wrapper">
+          <picture>
+            <source srcset="assets/images/method.webp" type="image/webp">
+            <img
+              src="assets/images/method.png"
+              alt="LOCI method overview: dual-memory architecture with object-centric 3D memory and episodic memory for agentic retrieval"
+              class="hero-teaser-img"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+        <div class="hero-image-caption">
+          <p>
+            <strong>Figure 2: Method Overview.</strong> <em>Build Memory</em> (left): RGB-D sequences are processed by detection and segmentation, lifted to 3D object entities, and fused into object-centric 3D memory <strong>G</strong> alongside episodic memory <strong>D</strong>. <em>User Query &amp; Agentic Retrieval</em> (right): a multimodal agent reasons over the memory graph, retrieves cross-memory links, and reranks candidates to produce a grounded natural-language answer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-World Humanoid Demonstrations Section -->
+  <section class="section" id="real-world-demo">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fa-solid fa-robot" style="color: var(--accent-rose);"></i> Real-World Humanoid Demonstrations
+      </h2>
+      <p class="section-subtitle">
+        LOCI deployed on a Unitree G1 humanoid robot in a real-world office environment, demonstrating long-horizon memory retrieval and evidence-grounded reasoning across multiple rooms.
+      </p>
+
+      <div class="hero-image-card">
+        <div class="hero-image-wrapper">
+          <picture>
+            <source srcset="assets/images/real.webp" type="image/webp">
+            <img
+              src="assets/images/real.png"
+              alt="Real-world humanoid robot demonstration: LOCI memory retrieval and grounded navigation in office environment"
+              class="hero-teaser-img"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+        <div class="hero-image-caption">
+          <p>
+            <strong>Figure 3: Real-World Deployment.</strong> A Unitree G1 humanoid queries LOCI's dual memory to find a Van Gogh painting across five exploration episodes. Episodic memory links t<sub>4</sub> (encounter) to the correct object candidate in object memory via cross-memory links, enabling precise grounded retrieval and navigation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Coming Soon & Release Roadmap Section -->
   <section class="section" id="coming-soon">
     <div class="container">
@@ -223,18 +308,8 @@ long-horizon memory retrieval and evidence-grounded reason-ing in a real-world o
             </div>
             <div class="step-badge">Phase 2 • In Progress</div>
             <h4 class="step-phase-title">arXiv Preprint & Videos</h4>
-            <p class="step-phase-desc">Full page research paper preprint with formal topological proofs and multi-angle Unitree H1 robot video logs.</p>
+            <p class="step-phase-desc">Full page research paper preprint with formal topological proofs and multi-angle Unitree G1 robot video logs.</p>
           </div>
-
-          <!-- Step 3 (Upcoming) -->
-          <!-- <div class="roadmap-step upcoming">
-            <div class="step-indicator">
-              <i class="fa-solid fa-code"></i>
-            </div>
-            <div class="step-badge">Phase 3 • Packaging</div>
-            <h4 class="step-phase-title">PyTorch & JAX Checkpoints</h4>
-            <p class="step-phase-desc">Release of pre-trained model weights, zero-shot policy inference pipelines, and ROS2 / Isaac Sim connectors.</p>
-          </div> -->
 
           <!-- Step 4 (Upcoming) -->
           <div class="roadmap-step upcoming">
@@ -269,42 +344,6 @@ long-horizon memory retrieval and evidence-grounded reason-ing in a real-world o
           </div>
         </div>
 
-        <!-- Card 2: Codebase & Weights -->
-        <!-- <div class="deliverable-card">
-          <div class="deliverable-top">
-            <div class="deliverable-icon icon-purple">
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <span class="deliverable-tag tag-soon">Coming Soon</span>
-          </div>
-          <h4 class="deliverable-title">PyTorch & JAX Foundation Checkpoints</h4>
-          <p class="deliverable-desc">
-            End-to-end repository with pretrained weights, modular Loci Graph extraction libraries, and zero-shot deployment controllers for mobile manipulation.
-          </p>
-          <div class="deliverable-meta">
-            <span><i class="fa-brands fa-python"></i> PyTorch / JAX / ROS2</span>
-            <span class="meta-status">Packaging</span>
-          </div>
-        </div> -->
-
-        <!-- Card 3: Robot Video Demos -->
-        <div class="deliverable-card">
-          <div class="deliverable-top">
-            <div class="deliverable-icon icon-rose">
-              <i class="fa-solid fa-film"></i>
-            </div>
-            <span class="deliverable-tag tag-soon">Coming Soon</span>
-          </div>
-          <h4 class="deliverable-title">Real-World Humanoid Demonstrations</h4>
-          <p class="deliverable-desc">
-            High-framerate video recordings showcasing zero-shot multi-room object localization, episodic recall over 24 hours, and dynamic obstacle avoidance on physical robots.
-          </p>
-          <div class="deliverable-meta">
-            <span><i class="fa-solid fa-robot"></i> Unitree H1 / Mobile Bases</span>
-            <span class="meta-status">In Production</span>
-          </div>
-        </div>
-
         <!-- Card 4: Standardized Benchmarks -->
         <div class="deliverable-card">
           <div class="deliverable-top">
@@ -324,7 +363,7 @@ long-horizon memory retrieval and evidence-grounded reason-ing in a real-world o
         </div>
 
         <!-- Card 5: WebGL Sandbox -->
-        <div class="deliverable-card">
+        <!-- <div class="deliverable-card">
           <div class="deliverable-top">
             <div class="deliverable-icon icon-amber">
               <i class="fa-solid fa-cubes"></i>
@@ -339,7 +378,7 @@ long-horizon memory retrieval and evidence-grounded reason-ing in a real-world o
             <span><i class="fa-solid fa-globe"></i> Three.js / WebGL</span>
             <span class="meta-status">Under Development</span>
           </div>
-        </div>
+        </div> -->
 
         <!-- Card 6: BibTeX Citation -->
         <div class="deliverable-card">
