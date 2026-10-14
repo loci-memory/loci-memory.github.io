@@ -1133,28 +1133,6 @@ a:hover {
   gap: 0;
 }
 
-.deployment-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding: 1.25rem 1.5rem;
-  color: var(--text-secondary);
-  background: rgba(225, 29, 72, 0.04);
-  border: 1px solid rgba(225, 29, 72, 0.15);
-  border-radius: var(--radius-md);
-}
-
-.deployment-note i {
-  color: var(--accent-rose);
-  font-size: 1.25rem;
-  margin-top: 0.2rem;
-}
-
-.deployment-note p {
-  line-height: 1.65;
-}
-
 /* Responsive Media Queries */
 @media (max-width: 992px) {
   .roadmap-track {
