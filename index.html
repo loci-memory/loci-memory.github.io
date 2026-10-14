@@ -20,11 +20,11 @@
     <div class="floating-nav-content">
       <ul class="floating-nav-menu">
         <li><a href="#hero" class="floating-nav-link active"><i class="fa-solid fa-house"></i> Overview</a></li>
-        <!-- <li><a href="#visualizer" class="floating-nav-link"><i class="fa-solid fa-brain"></i> Simulation</a></li> -->
         <li><a href="#abstract" class="floating-nav-link"><i class="fa-solid fa-file-alt"></i> Abstract</a></li>
-        <li><a href="#method" class="floating-nav-link"><i class="fa-solid fa-diagram-project"></i> Method</a></li>
-        <li><a href="#real-world-demo" class="floating-nav-link"><i class="fa-solid fa-robot"></i> Real-World Demo</a></li>
-        <!-- <li><a href="#coming-soon" class="floating-nav-link"><i class="fa-solid fa-rocket"></i> Coming Soon</a></li> -->
+        <li><a href="#framework" class="floating-nav-link"><i class="fa-solid fa-diagram-project"></i> Framework</a></li>
+        <li><a href="#details" class="floating-nav-link"><i class="fa-solid fa-layer-group"></i> Details</a></li>
+        <li><a href="#benchmarks" class="floating-nav-link"><i class="fa-solid fa-chart-column"></i> Benchmarks</a></li>
+        <li><a href="#real-world-demo" class="floating-nav-link"><i class="fa-solid fa-robot"></i> Deployment</a></li>
       </ul>
     </div>
   </nav>
@@ -37,107 +37,18 @@
       </div>
 
       <h1 class="hero-title">LOCI: An Egocentric-Allocentric Dual Memory for Robotic Spatiotemporal Reasoning</h1>
-      
-      <!-- Authors List -->
-      <div class="authors-container">
-        <!-- <div class="authors-list">
-          <span class="author-item"><a href="#">H</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">D</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">D</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">T</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">C</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">B</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">T</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">Y</a><sup>2</sup></span>
-          <span class="author-item"><a href="#">A</a><sup>1</sup></span>
-          <span class="author-item"><a href="#">A</a><sup>3</sup></span>
-        </div>
-        <div class="affiliations-list">
-          <span class="affiliation-item"><sup>1</sup>Vinmotion</span>
-          <span class="affiliation-item"><sup>2</sup>University of Southern California</span>
-          <span class="affiliation-item"><sup>3</sup>Oxford Robotics Institute, University of Oxford</span>
-        </div> -->
-      </div>
 
-      <!-- Action Link Buttons with Coming Soon Indicators -->
       <div class="hero-buttons">
-        <a href="#coming-soon" class="btn btn-outline btn-with-badge">
-          <i class="fa-solid fa-file-pdf"></i> Paper (PDF)
-          <!-- <span class="btn-subtag">Coming Soon</span> -->
+        <a href="assets/papers/loci-icra-2027.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-solid fa-file-pdf"></i> Read the Paper
         </a>
-        <a href="#coming-soon" class="btn btn-outline btn-with-badge">
-          <i class="fa-solid fa-bookmark"></i> arXiv
-          <!-- <span class="btn-subtag">Coming Soon</span> -->
+        <a href="#framework" class="btn btn-outline">
+          <i class="fa-solid fa-diagram-project"></i> Explore the Framework
         </a>
-        <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-with-badge">
-          <i class="fa-brands fa-github"></i> GitHub Repo
-          <!-- <span class="btn-subtag">Pre-Release</span> -->
-        </a>
-        <a href="#visualizer" class="btn btn-outline">
-          <i class="fa-solid fa-gamepad"></i> Live Simulation
-        </a>
-        <a href="#coming-soon" class="btn btn-outline btn-with-badge">
-          <i class="fa-solid fa-circle-play"></i> Video Demos
-          <!-- <span class="btn-subtag">Coming Soon</span> -->
+        <a href="#benchmarks" class="btn">
+          <i class="fa-solid fa-chart-column"></i> View Benchmarks
         </a>
       </div>
-
-      <!-- Teaser Image Card -->
-      <div class="hero-image-card" id="teaser">
-        <div class="hero-image-wrapper">
-          <picture>
-            <source srcset="assets/images/intro.webp" type="image/webp">
-            <img 
-              src="assets/images/intro.png" 
-              alt="LOCI Dual Memory Architecture and Spatiotemporal Retrieval Teaser" 
-              class="hero-teaser-img"
-              loading="eager"
-            >
-          </picture>
-        </div>
-        <div class="hero-image-caption">
-          <p>
-            <strong>Figure 1:</strong> LOCI organizes robot experience into persistent object-centric 3-D memory and episodic observation intervals. Observation links connect mapped entities to the context and visual evidence of individual encounters. A multimodal agent retrieves from both memories and inspects supporting evidence when semantic summaries are insufficient. </p>
-        </div>
-      </div>
-
-      <!-- Hero Interactive Canvas Card -->
-      <!-- <div class="hero-visual-card" id="visualizer">
-        <div class="visualizer-header">
-          <div class="visualizer-title">
-            <span class="dot"></span> Live Simulation: Real-Time Spatial Loci Memory Retrieval & Path Planning
-          </div>
-          <div class="canvas-stats">
-            <span>Nodes: <strong id="statNodes" class="stat-val">128</strong></span>
-            <span>Memory Retention: <strong id="statRetention" class="stat-val">99.4%</strong></span>
-            <span>Query Latency: <strong id="statLatency" class="stat-val">2.8ms</strong></span>
-          </div>
-        </div>
-
-        <div class="canvas-wrapper">
-          <canvas id="memoryCanvas"></canvas>
-        </div>
-
-        <div class="visualizer-controls">
-          <div class="prompt-buttons" id="promptControls">
-            <button class="prompt-btn active" data-preset="search-keys">
-              <i class="fa-solid fa-key"></i> Query: "Find keys near living room desk"
-            </button>
-            <button class="prompt-btn" data-preset="multi-room">
-              <i class="fa-solid fa-door-open"></i> Query: "Navigate to kitchen charging dock"
-            </button>
-            <button class="prompt-btn" data-preset="obstacle-bypass">
-              <i class="fa-solid fa-triangle-exclamation"></i> Query: "Recall path bypassing dynamic spill"
-            </button>
-            <button class="prompt-btn" data-preset="full-scan">
-              <i class="fa-solid fa-radar"></i> Query: "Reconstruct 24h Loci Graph"
-            </button>
-          </div>
-          <button class="btn btn-outline" id="btnResetCanvas" style="padding: 0.4rem 0.9rem; font-size: 0.85rem;">
-            <i class="fa-solid fa-rotate-right"></i> Reset Simulation
-          </button>
-        </div>
-      </div> -->
     </div>
   </header>
 
@@ -147,279 +58,249 @@
       <h2 class="section-title">
         <i class="fa-solid fa-book-open" style="color: var(--accent-cyan);"></i> Abstract
       </h2>
-      <!-- <p class="section-subtitle">A unified continuous foundation model for long-horizon spatial mapping and promptable episodic retrieval.</p> -->
-
       <div class="abstract-card">
         <p class="abstract-text">
-          Autonomous mobile robots operating over long
-horizons must remember what they observed, where and when
-they observed it, and which visual evidence supports their
-answers. Existing memory systems often prioritize semantic
-retrieval over visual histories or metric structure through 3D scene graphs, leaving persistent object identity, temporal
-context, and fine-grained visual evidence insufficiently integrated. We introduce LOCI, a dual-memory framework that
-organizes robot experience into persistent object-centric 3D entities and temporally localized episodes. Object memory
-consolidates identity and metric geometry across observations,
-while episodic memory captures scene context, activities, and
-observed changes. Observation links connect entities to their
-supporting encounters, enabling an agent to combine spatial
-and temporal retrieval with targeted visual inspection when
-textual summaries are insufficient. We evaluate LOCI on
-LMEE-Bench and OC-NaVQA, covering simulated indoor and
-real-world outdoor environments. LOCI improves question-answering accuracy on the LMEE-Bench 58-task subset and
-full benchmark by 8.7% and 10.6%, respectively, and reduces
-spatial and temporal localization errors on OC-NaVQA by
-14.9% and 53.6% relative to the most competitive baselines.
-Deployment on a Unitree G1 humanoid further demonstrates
-long-horizon memory retrieval and evidence-grounded reason-ing in a real-world office environment.
+          Autonomous mobile robots operating over long horizons must remember what they observed, where and when they observed it, and which visual evidence supports their answers. Existing memory systems often prioritize semantic retrieval over visual histories or metric structure through 3-D scene graphs, leaving persistent object identity, temporal context, and fine-grained visual evidence insufficiently integrated. We introduce <strong>LOCI</strong>, a dual-memory framework that organizes robot experience into persistent object-centric 3-D entities and temporally localized episodes. Object memory consolidates identity and metric geometry across observations, while episodic memory captures scene context, activities, and observed changes. Observation links connect entities to their supporting encounters, enabling an agent to combine spatial and temporal retrieval with targeted visual inspection when textual summaries are insufficient. We evaluate LOCI on LMEE-Bench and OC-NaVQA, covering simulated indoor and real-world outdoor environments. LOCI improves question-answering accuracy on the LMEE-Bench 58-task subset and full benchmark by 8.7% and 10.6%, respectively, and reduces spatial and temporal localization errors on OC-NaVQA by 14.9% and 53.6% relative to the most competitive baselines. Deployment on a Unitree G1 humanoid further demonstrates long-horizon memory retrieval and evidence-grounded reasoning in a real-world office environment.
         </p>
-
-        <!-- <div class="highlight-boxes">
-          <div class="highlight-box">
-            <div class="highlight-title">
-              <i class="fa-solid fa-network-wired" style="color: var(--accent-cyan);"></i> Topological Loci Indexing
-            </div>
-            <div class="highlight-desc">
-              Compresses continuous RGB-D and IMU trajectories into topological graph nodes with logarithmic lookup complexity \(\mathcal{O}(\log N)\).
-            </div>
-          </div>
-
-          <div class="highlight-box">
-            <div class="highlight-title">
-              <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-purple);"></i> Continuous Episodic Recall
-            </div>
-            <div class="highlight-desc">
-              Retains temporal context over 10,000+ execution steps while supporting natural language visual queries and temporal filtering.
-            </div>
-          </div>
-
-          <div class="highlight-box">
-            <div class="highlight-title">
-              <i class="fa-solid fa-bolt" style="color: var(--accent-emerald);"></i> Zero-Shot Navigation Policy
-            </div>
-            <div class="highlight-desc">
-              Directly translates memory embeddings into low-level humanoid velocity commands without fine-tuning on downstream environments.
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
 
-  
-
-  <!-- Method Overview Section -->
-  <section class="section" id="method">
+  <!-- Framework and Introduction -->
+  <section class="section" id="framework">
     <div class="container">
       <h2 class="section-title">
-        <i class="fa-solid fa-diagram-project" style="color: var(--accent-purple);"></i> Method Overview
+        <i class="fa-solid fa-diagram-project" style="color: var(--accent-purple);"></i> Framework & Introduction
       </h2>
-      <div class="hero-image-card">
+      <p class="section-subtitle">A persistent object memory and a temporally indexed episodic memory work together to answer questions about what happened, where it happened, and when.</p>
+
+      <figure class="hero-image-card framework-figure">
         <div class="hero-image-wrapper">
           <picture>
             <source srcset="assets/images/method.webp" type="image/webp">
             <img
               src="assets/images/method.png"
-              alt="LOCI method overview: dual-memory architecture with object-centric 3D memory and episodic memory for agentic retrieval"
+              alt="LOCI framework showing memory construction from RGB-D observations and agentic retrieval across object and episodic memories"
               class="hero-teaser-img"
               loading="lazy"
             >
           </picture>
         </div>
-        <div class="hero-image-caption">
+        <figcaption class="hero-image-caption">
           <p>
-            <strong>Figure 2: Method Overview.</strong> <em>Build Memory</em> (left): RGB-D sequences are processed by detection and segmentation, lifted to 3D object entities, and fused into object-centric 3D memory <strong>G</strong> alongside episodic memory <strong>D</strong>. <em>User Query &amp; Agentic Retrieval</em> (right): a multimodal agent reasons over the memory graph, retrieves cross-memory links, and reranks candidates to produce a grounded natural-language answer.
+            <strong>Figure 2: Overview of LOCI.</strong> Object memory consolidates persistent entities across observations, while episodic memory retains scene and event context within temporal intervals. Observation links connect the two memories, enabling selective retrieval of object information, encounter-specific context, and supporting visual evidence.
           </p>
+          <a class="figure-source-link" href="assets/images/method.png" target="_blank" rel="noopener">
+            <i class="fa-solid fa-expand"></i> Open full-resolution framework
+          </a>
+        </figcaption>
+      </figure>
+
+      <div class="intro-grid">
+        <article class="content-card">
+          <h3>Why dual memory?</h3>
+          <p>Long-horizon robots must connect an object's identity and metric location with the scene observed during a particular encounter. Observation-centric systems preserve visual history but leave identity and geometry implicit. Object-centric maps consolidate those properties, yet can lose transient activities and fine visual details.</p>
+          <p>LOCI connects both views. Persistent entities preserve identity and 3-D geometry across observations; episodic intervals preserve scene-wide context and change over time. The agent can move from compact summaries to the original visual evidence whenever a question requires details that were not captured in text.</p>
+        </article>
+        <article class="content-card contribution-card">
+          <h3>Core contributions</h3>
+          <ul class="feature-list">
+            <li><strong>Dual-memory representation:</strong> object-centric 3-D entities plus independently retrievable episodic intervals.</li>
+            <li><strong>Evidence-grounded retrieval:</strong> explicit links connect each entity to the encounters and images that support it.</li>
+            <li><strong>Cross-environment evaluation:</strong> simulated indoor trajectories, real-world outdoor sequences, component ablations, and Unitree G1 deployment.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method Details -->
+  <section class="section" id="details">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fa-solid fa-layer-group" style="color: var(--accent-cyan);"></i> Method Details
+      </h2>
+      <p class="section-subtitle">LOCI converts posed RGB-D observations into a linked memory graph, then retrieves only the evidence needed for each question.</p>
+
+      <div class="memory-equation" aria-label="LOCI memory graph definition">
+        <span>Object memory <strong>G</strong></span>
+        <i class="fa-solid fa-plus"></i>
+        <span>Episodic memory <strong>D</strong></span>
+        <i class="fa-solid fa-plus"></i>
+        <span>Observation links <strong>E</strong></span>
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Memory graph <strong>H = (G, D, E)</strong></span>
+      </div>
+
+      <div class="pipeline-steps detail-grid">
+        <article class="pipeline-step">
+          <div class="step-num">1</div>
+          <h3 class="step-title">Build object-centric 3-D memory</h3>
+          <p class="step-desc">Qwen3-VL produces object descriptions, SAM3 segments instances, and DINOv2 encodes appearance. Depth and camera pose lift each mask into 3-D. Geometric overlap and visual similarity associate observations with persistent entities, whose point clouds, boxes, descriptors, and semantic descriptions are updated over time.</p>
+        </article>
+        <article class="pipeline-step">
+          <div class="step-num">2</div>
+          <h3 class="step-title">Build episodic memory</h3>
+          <p class="step-desc">The observation stream is divided into 4-second intervals. Each interval stores its time span, a VLM summary, a text embedding, and RGB-D keyframes sampled at 1 Hz. This memory preserves activities, scene context, and changes that an object-level representation cannot capture alone.</p>
+        </article>
+        <article class="pipeline-step">
+          <div class="step-num">3</div>
+          <h3 class="step-title">Connect entities to encounters</h3>
+          <p class="step-desc">Observation links record the intervals and source views in which each entity appeared, together with view-quality scores. These links let the agent recover an object's persistent state, revisit a specific encounter, and inspect the surrounding scene.</p>
+        </article>
+        <article class="pipeline-step">
+          <div class="step-num">4</div>
+          <h3 class="step-title">Retrieve and reason over evidence</h3>
+          <p class="step-desc">The agent combines entity search, two-stage episodic retrieval, entity-view retrieval, and interval inspection. A reranker narrows 20 episodic candidates to the top 3; GPT-4o can make up to 12 tool calls before producing an evidence-grounded answer.</p>
+        </article>
+      </div>
+
+      <div class="implementation-card">
+        <h3>Implementation at a glance</h3>
+        <div class="implementation-grid">
+          <div><span>Perception</span><strong>Qwen3-VL-8B + SAM3</strong></div>
+          <div><span>Appearance</span><strong>DINOv2 ViT-B/14</strong></div>
+          <div><span>Visual retrieval</span><strong>SigLIP base/16</strong></div>
+          <div><span>Text embeddings</span><strong>Qwen3-Embedding-8B</strong></div>
+          <div><span>Episodic reranker</span><strong>Qwen3-Reranker-0.6B</strong></div>
+          <div><span>Reasoning</span><strong>GPT-4o, max 12 calls</strong></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Real-World Humanoid Demonstrations Section -->
+  <!-- Benchmarks -->
+  <section class="section" id="benchmarks">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fa-solid fa-chart-column" style="color: var(--accent-emerald);"></i> Benchmarks
+      </h2>
+      <p class="section-subtitle">Evaluation on LMEE-Bench and OC-NaVQA measures question answering together with spatial and temporal grounding.</p>
+
+      <div class="metric-grid">
+        <div class="metric-card"><strong>77.2%</strong><span>LMEE subset accuracy</span><small>+8.7 points over the strongest reproduced baseline</small></div>
+        <div class="metric-card"><strong>72.2%</strong><span>LMEE full accuracy</span><small>+10.6 points over the strongest reproduced baseline</small></div>
+        <div class="metric-card"><strong>28.28 m</strong><span>OC-NaVQA positional error</span><small>14.9% lower than STaR</small></div>
+        <div class="metric-card"><strong>1.47 min</strong><span>OC-NaVQA temporal error</span><small>53.6% lower than DAAAM</small></div>
+      </div>
+
+      <article class="results-card benchmark-block">
+        <div class="benchmark-heading">
+          <div>
+            <span class="eyebrow">Table I</span>
+            <h3>LMEE-Bench multiple-choice QA accuracy (%)</h3>
+          </div>
+          <p>The subset contains 58 trajectories, 272 goals, and 145 questions; the full split contains 166 trajectories, 828 goals, and 406 questions.</p>
+        </div>
+        <div class="benchmark-table-wrapper">
+          <table class="benchmark-table">
+            <thead>
+              <tr><th>Split</th><th>Method</th><th>Easy</th><th>Medium</th><th>Hard</th><th>Total</th></tr>
+            </thead>
+            <tbody>
+              <tr><td rowspan="6"><strong>Subset</strong></td><td>GPT-4o</td><td>65.7</td><td>51.1</td><td>56.3</td><td>55.2</td></tr>
+              <tr><td>MemoryExplorer</td><td>68.6</td><td>63.8</td><td>68.7</td><td>65.5</td></tr>
+              <tr><td>DAAAM</td><td>57.1</td><td>59.6</td><td>62.5</td><td>59.1</td></tr>
+              <tr><td>STaR</td><td>68.6</td><td>71.3</td><td>75.0</td><td>71.0</td></tr>
+              <tr><td>FARM</td><td>77.1</td><td>69.2</td><td>43.8</td><td>68.3</td></tr>
+              <tr class="highlight-row"><td>LOCI <span class="badge-best">Best</span></td><td>85.7</td><td>76.6</td><td>62.5</td><td>77.2</td></tr>
+              <tr class="split-start"><td rowspan="5"><strong>Full</strong></td><td>MemoryExplorer</td><td>66.2</td><td>64.3</td><td>64.8</td><td>64.8</td></tr>
+              <tr><td>DAAAM</td><td>52.5</td><td>48.2</td><td>61.1</td><td>50.7</td></tr>
+              <tr><td>STaR</td><td>62.5</td><td>56.3</td><td>63.0</td><td>58.4</td></tr>
+              <tr><td>FARM</td><td>73.8</td><td>64.0</td><td>59.3</td><td>65.3</td></tr>
+              <tr class="highlight-row"><td>LOCI <span class="badge-best">Best</span></td><td>78.8</td><td>72.1</td><td>63.0</td><td>72.2</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <div class="benchmark-pair">
+        <article class="results-card benchmark-block">
+          <div class="benchmark-heading">
+            <div>
+              <span class="eyebrow">Table II</span>
+              <h3>OC-NaVQA results</h3>
+            </div>
+            <p>All methods use GPT-4o for reasoning. Lower positional and temporal errors are better.</p>
+          </div>
+          <div class="benchmark-table-wrapper">
+            <table class="benchmark-table">
+              <thead>
+                <tr><th>Method</th><th>Accuracy (%) &uarr;</th><th>Position (m) &darr;</th><th>Time (min) &darr;</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>FARM</td><td>70.70</td><td>59.22</td><td>6.46</td></tr>
+                <tr><td>DAAAM</td><td>64.90</td><td>52.67</td><td>3.17</td></tr>
+                <tr><td>STaR</td><td>72.73</td><td>33.24</td><td>3.24</td></tr>
+                <tr class="highlight-row"><td>LOCI</td><td>69.70</td><td><strong>28.28</strong></td><td><strong>1.47</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="results-card benchmark-block">
+          <div class="benchmark-heading">
+            <div>
+              <span class="eyebrow">Table III</span>
+              <h3>OC-NaVQA ablation study</h3>
+            </div>
+            <p>The complete system gives the best joint accuracy, spatial grounding, and temporal grounding.</p>
+          </div>
+          <div class="benchmark-table-wrapper">
+            <table class="benchmark-table">
+              <thead>
+                <tr><th>Variant</th><th>Accuracy (%) &uarr;</th><th>Position (m) &darr;</th><th>Time (min) &darr;</th></tr>
+              </thead>
+              <tbody>
+                <tr class="highlight-row"><td>LOCI</td><td><strong>69.70</strong></td><td><strong>28.28</strong></td><td><strong>1.47</strong></td></tr>
+                <tr><td>Without object-centric 3-D memory</td><td>67.68</td><td>51.68</td><td>2.16</td></tr>
+                <tr><td>Without episodic memory retrieval</td><td>61.11</td><td>38.88</td><td>2.78</td></tr>
+                <tr><td>Without reranker</td><td>68.42</td><td>44.33</td><td>1.71</td></tr>
+                <tr><td>Without SigLIP</td><td>67.68</td><td>33.75</td><td>2.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-World Humanoid Deployment -->
   <section class="section" id="real-world-demo">
     <div class="container">
       <h2 class="section-title">
-        <i class="fa-solid fa-robot" style="color: var(--accent-rose);"></i> Real-World Humanoid Demonstrations
+        <i class="fa-solid fa-robot" style="color: var(--accent-rose);"></i> Real-World Deployment
       </h2>
-      <!-- <p class="section-subtitle">
-        LOCI deployed on a Unitree G1 humanoid robot in a real-world office environment, demonstrating long-horizon memory retrieval and evidence-grounded reasoning across multiple rooms.
-      </p> -->
+      <p class="section-subtitle">LOCI runs with a Unitree G1 humanoid in an office environment, connecting natural-language queries to grounded observations and navigation targets.</p>
 
-      <div class="hero-image-card">
+      <figure class="hero-image-card">
         <div class="hero-image-wrapper">
           <picture>
             <source srcset="assets/images/real.webp" type="image/webp">
             <img
               src="assets/images/real.png"
-              alt="Real-world humanoid robot demonstration: LOCI memory retrieval and grounded navigation in office environment"
+              alt="Unitree G1 humanoid using LOCI to retrieve object and episodic evidence and navigate to a grounded target"
               class="hero-teaser-img"
               loading="lazy"
             >
           </picture>
         </div>
-        <div class="hero-image-caption">
-          <p>
-            <strong>Figure 3: Real-World Deployment.</strong> A Unitree G1 humanoid queries LOCI's dual memory to find a Van Gogh painting across five exploration episodes. Episodic memory links t<sub>4</sub> (encounter) to the correct object candidate in object memory via cross-memory links, enabling precise grounded retrieval and navigation.
-          </p>
-        </div>
+        <figcaption class="hero-image-caption">
+          <p><strong>Figure 5: Real-world deployment of LOCI.</strong> The robot accumulates observations during exploration, retrieves complementary evidence from episodic and object-centric memories, and grounds the query to a navigation target in the environment.</p>
+        </figcaption>
+      </figure>
+
+      <div class="deployment-note">
+        <i class="fa-solid fa-microchip"></i>
+        <p>RGB-D observations and pose estimates stream from the robot to an external RTX 5090 workstation for perception and memory processing. The grounded 3-D target returns through ROS 2 to onboard Nav2 for planning and execution on the Jetson AGX Orin.</p>
       </div>
     </div>
   </section>
-
-  <!-- =========================================================================
-       Coming Soon & Release Roadmap Section (Temporarily Disabled)
-       ========================================================================= -->
-  <!--
-  <section class="section" id="coming-soon">
-    <div class="container">
-      <div class="coming-soon-header">
-        <div class="status-pill">
-          <span class="status-dot pulsing"></span> Pre-Release Roadmap
-        </div>
-        <h2 class="section-title">
-          <i class="fa-solid fa-rocket" style="color: var(--accent-purple);"></i> Deliverables & Release Timeline
-        </h2>
-        <!- - <p class="section-subtitle">
-          We are preparing the full open-source release of LOCI. The research manuscript, pretrained foundation model checkpoints, standardized benchmarks, and physical robot demonstrations will be available according to the schedule below.
-        </p> - ->
-      </div>
-
-      <!- - Release Timeline / Roadmap - ->
-      <div class="roadmap-wrapper">
-        <div class="roadmap-track">
-          <!- - Step 1 (Live) - ->
-          <div class="roadmap-step completed">
-            <div class="step-indicator">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="step-badge">Phase 1 • Live Now</div>
-            <h4 class="step-phase-title">Research Preview & Abstract</h4>
-            <p class="step-phase-desc">Announcement of the LOCI foundation model architecture and interactive loci graph simulation.</p>
-          </div>
-
-          <!- - Step 2 (In Progress) - ->
-          <div class="roadmap-step in-progress">
-            <div class="step-indicator">
-              <i class="fa-solid fa-hourglass-half"></i>
-            </div>
-            <div class="step-badge">Phase 2 • In Progress</div>
-            <h4 class="step-phase-title">arXiv Preprint & Videos</h4>
-            <p class="step-phase-desc">Full page research paper preprint with formal topological proofs and multi-angle Unitree G1 robot video logs.</p>
-          </div>
-
-          <!- - Step 4 (Upcoming) - ->
-          <div class="roadmap-step upcoming">
-            <div class="step-indicator">
-              <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <div class="step-badge">Phase 3 • Coming Soon</div>
-            <h4 class="step-phase-title">Benchmark Suite</h4>
-            <p class="step-phase-desc">Public release of multi-room evaluation suite, 10k-step episodic retention tests, and camera-ready artifacts.</p>
-          </div>
-        </div>
-      </div>
-
-      <!- - Upcoming Deliverables Grid - ->
-      <h3 class="deliverables-heading">Upcoming Deliverables</h3>
-      <div class="deliverables-grid">
-        <!- - Card 1: Full Paper - ->
-        <div class="deliverable-card">
-          <div class="deliverable-top">
-            <div class="deliverable-icon icon-cyan">
-              <i class="fa-solid fa-file-pdf"></i>
-            </div>
-            <span class="deliverable-tag tag-soon">Coming Soon</span>
-          </div>
-          <h4 class="deliverable-title">Research Paper & Technical Appendix</h4>
-          <p class="deliverable-desc">
-            Complete formal documentation covering spatial-temporal transformer kernels, logarithmic graph indexing bounds, and extensive multi-baseline ablation studies.
-          </p>
-          <div class="deliverable-meta">
-            <span><i class="fa-regular fa-clock"></i> Expected: arXiv Submission</span>
-            <span class="meta-status">In Preparation</span>
-          </div>
-        </div>
-
-        <!- - Card 4: Standardized Benchmarks - ->
-        <div class="deliverable-card">
-          <div class="deliverable-top">
-            <div class="deliverable-icon icon-emerald">
-              <i class="fa-solid fa-chart-column"></i>
-            </div>
-            <span class="deliverable-tag tag-soon">Coming Soon</span>
-          </div>
-          <h4 class="deliverable-title">Evaluation Benchmark & Leaderboard</h4>
-          <p class="deliverable-desc">
-            Standardized evaluation harness across 50+ photorealistic indoor scenes, testing long-horizon query latency, memory retention, and navigation success rates.
-          </p>
-          <div class="deliverable-meta">
-            <span><i class="fa-solid fa-database"></i> 50+ Multi-Room Testbeds</span>
-            <span class="meta-status">Evaluating</span>
-          </div>
-        </div>
-
-        <!- - Card 5: WebGL Sandbox - ->
-        <!- - <div class="deliverable-card">
-          <div class="deliverable-top">
-            <div class="deliverable-icon icon-amber">
-              <i class="fa-solid fa-cubes"></i>
-            </div>
-            <span class="deliverable-tag tag-soon">Coming Soon</span>
-          </div>
-          <h4 class="deliverable-title">Interactive 3D WebGL Memory Playground</h4>
-          <p class="deliverable-desc">
-            An in-browser 3D interactive viewer to inspect topological loci graph nodes, test promptable spatial queries, and simulate humanoid agent path planning.
-          </p>
-          <div class="deliverable-meta">
-            <span><i class="fa-solid fa-globe"></i> Three.js / WebGL</span>
-            <span class="meta-status">Under Development</span>
-          </div>
-        </div> - ->
-
-        <!- - Card 6: BibTeX Citation - ->
-        <div class="deliverable-card">
-          <div class="deliverable-top">
-            <div class="deliverable-icon icon-cyan">
-              <i class="fa-solid fa-quote-right"></i>
-            </div>
-            <span class="deliverable-tag tag-soon">Coming Soon</span>
-          </div>
-          <h4 class="deliverable-title">BibTeX Citation & Camera-Ready</h4>
-          <p class="deliverable-desc">
-            Formal citation entries, DOI identifiers, and conference camera-ready artifacts will be indexed and published concurrently with paper acceptance.
-          </p>
-          <div class="deliverable-meta">
-            <span><i class="fa-solid fa-bookmark"></i> BibTeX & Proceedings</span>
-            <span class="meta-status">Pending Release</span>
-          </div>
-        </div>
-      </div>
-
-      <!- - Stay Updated Banner / GitHub Community - ->
-      <div class="community-callout-card">
-        <div class="community-callout-content">
-          <div class="community-callout-text">
-            <h3><i class="fa-brands fa-github"></i> Stay Updated with LOCI</h3>
-            <p>Star the repository on GitHub to receive instant notifications when the arXiv preprint, code repository, and pre-trained model weights are published.</p>
-          </div>
-          <div class="community-callout-actions">
-            <a href="#" target="_blank" rel="noopener" class="btn btn-primary">
-              <i class="fa-brands fa-github"></i> Star on GitHub
-            </a>
-            <a href="#hero" class="btn btn-outline">
-              <i class="fa-solid fa-arrow-up"></i> Back to Overview
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  -->
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 LOCI Research Project Team.</p>
+      <p>&copy; 2026 LOCI Research Project Team. Content and results sourced from the LOCI paper.</p>
     </div>
   </footer>
 
