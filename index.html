@@ -6,8 +6,11 @@
   <meta name="description" content="LOCI: An Egocentric-Allocentric Dual Memory for Robotic Spatiotemporal Reasoning.">
   <title>LOCI: An Egocentric-Allocentric Dual Memory for Robotic Spatiotemporal Reasoning</title>
 
-  <!-- External Icons & Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Self-hosted icons and fonts -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,9 +42,9 @@
       <h1 class="hero-title">LOCI: An Egocentric-Allocentric Dual Memory for Robotic Spatiotemporal Reasoning</h1>
 
       <div class="hero-buttons">
-        <a href="assets/papers/loci-icra-2027.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+        <span class="btn btn-primary btn-disabled" aria-disabled="true">
           <i class="fa-solid fa-file-pdf"></i> Read the Paper
-        </a>
+        </span>
         <a href="#framework" class="btn btn-outline">
           <i class="fa-solid fa-diagram-project"></i> Explore the Framework
         </a>

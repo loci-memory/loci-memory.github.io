@@ -3,8 +3,6 @@
    Inspired by BFM-Zero academic project site standards
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
-
 :root {
   /* Color Palette - Premium Academic Light Theme */
   --bg-primary: #f8fafc;
@@ -356,6 +354,15 @@ a:hover {
 
 .btn-outline:hover {
   background: rgba(2, 132, 199, 0.12);
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  opacity: 0.55;
+  box-shadow: none;
 }
 
 /* Hero Teaser Image Card */
